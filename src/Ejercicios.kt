@@ -33,7 +33,7 @@ fun reto3() {
     val contactos = listOf("1234567", "9876543", "1234567", "5551234", "9876543", "1112223", "1234567", "9998887", "5551234", "4445566", "7778899", "1234567", "9876543", "1112223", "3334445", "5551234", "6667778", "7778899", "8889990", "9998887")
     val unicos = contactos.toSet().sorted()
 
-    println("\n -RETO 3: Limpieza de Contactos Duplicados")
+    println("\n -RETO 3: Limpieza de Contactos Duplicados- ")
     println("Contactos unicos ordenados: $unicos")
     println("  ")
 }
@@ -46,7 +46,7 @@ fun reto4() {
         conteo[producto] = conteo.getOrDefault(producto, 0) + 1
     }
 
-    println("\n -RETO 4: Analisis de Carrito de Compras")
+    println("\n -RETO 4: Analisis de Carrito de Compras- ")
     println("Conteo: $conteo")
     println("  ")
 }
@@ -59,7 +59,7 @@ fun reto5(){
         invertidos[i] = historial[historial.size -1 - i]
     }
 
-    println("\n -RETO 5: Historial de Navegacion Reversible")
+    println("\n -RETO 5: Historial de Navegacion Reversible- ")
     println("Originales: ${historial.joinToString()}")
     println("Invertidos: ${invertidos.joinToString()}")
     println("  ")
@@ -73,7 +73,7 @@ fun reto6() {
     val comunes = interesesP1.intersect(interesesP2)
     val exclusivosP1 = interesesP1.subtract(interesesP2)
 
-    println("\n -RETO 6: Compatibilidad de Interes")
+    println("\n -RETO 6: Compatibilidad de Interes- ")
     println("Interes Comunes: $comunes")
     println("Exclusivos de Persona 1: $exclusivosP1")
     println("  ")
@@ -96,12 +96,23 @@ fun reto7() {
         }
     }
 
-    println("\n -RETO 7: Inventario de Despensa")
+    println("\n -RETO 7: Inventario de Despensa- ")
     println("Inicial: $despensa")
     consumir("Leche", 1)
     consumir("Arroz", 2)
     println("Final: $despensa")
     println("  ")
 
+}
 
+// 8. Calculo de Promedio Academico
+fun reto8() {
+    val notas = listOf(4.2 to 0.1, 5.0 to 0.1, 4.3 to 0.2, 3.5 to 0.5, 3.2 to 0.1)
+    var notaFinal = 0.0
+    for (par in notas) {
+        notaFinal += par.first * par.second
+    }
+
+    println("\n -RETO 8: Calculo de Promedio Academico- ")
+    println("Nota Final: $notaFinal")
 }
