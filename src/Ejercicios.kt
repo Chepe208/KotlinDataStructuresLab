@@ -115,4 +115,16 @@ fun reto8() {
 
     println("\n -RETO 8: Calculo de Promedio Academico- ")
     println("Nota Final: $notaFinal")
+    println("  ")
+}
+
+// 9. Traductor de Códigos de País
+fun reto9() {
+    val paises = mapOf("CO" to "Colombia", "MX" to "México", "AR" to "Argentina", "ES" to "España")
+
+    println("\n -Reto 9: Traductor de Codigos de País- ")
+    for ((codigo, nombre) in paises) {
+        println("El código [$codigo] pertenece a [$nombre]")
+    }
+    println("  ")
 }
