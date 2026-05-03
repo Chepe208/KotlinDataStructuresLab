@@ -51,6 +51,7 @@ fun reto4() {
     println("  ")
 }
 
+// 5. Historial de Navegacion Reversible
 fun reto5(){
     val historial = arrayOf("github.com", "exito.com", "loom.com", "alkosto.com", "youtube.com")
     val invertidos = arrayOfNulls<String>(historial.size)
@@ -61,5 +62,19 @@ fun reto5(){
     println("\n -RETO 5: Historial de Navegacion Reversible")
     println("Originales: ${historial.joinToString()}")
     println("Invertidos: ${invertidos.joinToString()}")
+    println("  ")
+}
+
+// 6. Compatibilidad de Interes (Match)
+fun reto6() {
+    val interesesP1 = setOf("Viajes", "Cocinar", "Negocios", "Musica")
+    val interesesP2 = setOf("Musica", "Leer", "Negocios", "Deportes")
+
+    val comunes = interesesP1.intersect(interesesP2)
+    val exclusivosP1 = interesesP1.subtract(interesesP2)
+
+    println("\n -RETO 6: Compatibilidad de Interes")
+    println("Interes Comunes: $comunes")
+    println("Exclusivos de Persona 1: $exclusivosP1")
     println("  ")
 }
