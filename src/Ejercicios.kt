@@ -50,3 +50,16 @@ fun reto4() {
     println("Conteo: $conteo")
     println("  ")
 }
+
+fun reto5(){
+    val historial = arrayOf("github.com", "exito.com", "loom.com", "alkosto.com", "youtube.com")
+    val invertidos = arrayOfNulls<String>(historial.size)
+    for (i in historial.indices) {
+        invertidos[i] = historial[historial.size -1 - i]
+    }
+
+    println("\n -RETO 5: Historial de Navegacion Reversible")
+    println("Originales: ${historial.joinToString()}")
+    println("Invertidos: ${invertidos.joinToString()}")
+    println("  ")
+}
