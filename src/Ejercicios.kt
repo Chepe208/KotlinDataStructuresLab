@@ -173,3 +173,15 @@ fun reto12() {
     println("¿Es espejo?: $esEspejo")
     println("  ")
 }
+
+// 13. Reparto de Pedidos por Camión
+fun reto13() {
+    val paquetes = (1..50).toList().map { "Paquete #$it" }
+    val lotes = paquetes.chunked(10)
+
+    println("\n -Reto 13: Reparto de Pedidos por Camion- ")
+    lotes.forEachIndexed { index, lote ->
+        println("Camión ${index + 1}: ${lote.size} paquetes")
+    }
+    println("  ")
+}
