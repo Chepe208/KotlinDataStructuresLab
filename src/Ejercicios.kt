@@ -291,6 +291,25 @@ fun reto20() {
     while (i < agenda1.size) fusion.add(agenda1[i++])
     while (j < agenda2.size) fusion.add(agenda2[j++])
 
-    println("\n--- Reto 20: Unión Agendas ---")
+    println("\n -Reto 20: Unión de Agendas Ordenadas- ")
     println("Agenda Fusionada: $fusion")
+    println("  ")
+}
+
+// 21. Días de Mantenimiento (Primos)
+fun reto21() {
+    val n = 100
+    val esPrimo = BooleanArray(n + 1) { true }
+    esPrimo[0] = false
+    esPrimo[1] = false
+    for (p in 2..Math.sqrt(n.toDouble()).toInt()) {
+        if (esPrimo[p]) {
+            for (i in p * p..n step p) esPrimo[i] = false
+        }
+    }
+    val pisosPrimos = (1..n).filter { esPrimo[it] }
+
+    println("\n -Reto 21: Dias de Mantenimiento- ")
+    println("Pisos con mantenimiento: $pisosPrimos")
+    println("  ")
 }
