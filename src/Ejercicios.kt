@@ -348,3 +348,23 @@ fun reto23() {
     println("Diferencias vs Promedio Anterior: $diferencias")
     println("  ")
 }
+
+// 24. Organización de Contenedores
+fun reto24() {
+    val manifiesto = "(()(())())"
+    var balance = 0
+    var esValido = true
+    for (char in manifiesto) {
+        if (char == '(') balance++
+        else if (char == ')') balance--
+        if (balance < 0) {
+            esValido = false
+            break
+        }
+    }
+    if (balance != 0) esValido = false
+
+    println("\n  -Reto 24: Organizacion de Contenedores Balanceados- ")
+    println("Manifiesto: $manifiesto - ¿Válido?: $esValido")
+    println("  ")
+}
