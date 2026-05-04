@@ -196,3 +196,15 @@ fun reto14() {
     println("Primer ticket único: $unico")
     println("  ")
 }
+
+// 15. Calculadora de IVA Selectiva
+fun reto15() {
+    val productos = mapOf("Leche" to 4800.0, "Carne" to 90000.0, "Coca-Cola" to 6500.0, "Juguete" to 110000.0)
+    val conIVA = productos.mapValues { (_, precio) ->
+        if (precio > 50000) precio * 1.19 else precio
+    }
+
+    println("\n -Reto 15: Calculadora de IVA Selectiva-")
+    println("Precios con IVA: $conIVA")
+    println("  ")
+}
